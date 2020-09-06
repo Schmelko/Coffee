@@ -26,7 +26,7 @@ class Coffee:
         else:
             print("your current coffee balance is: HUF {}, you cannot drink any coffee at the moment!".format(self.coffee_balance))
 
-    def coffee_price(self, coffee_price, coffee_type,member_coffee_type, member_coffee_price):
+"""     def coffee_price(self, coffee_price, coffee_type,member_coffee_type, member_coffee_price):
        if self.coffee_type == "capuccino":
             self.coffee_price = 700
        elif self.coffee_type == "doppio":
@@ -36,13 +36,14 @@ class Coffee:
        else:
             self.coffee_type == "mespresso"
             self.coffee_price =450
-   
+ """   
+
 class Member(Coffee):
     def __init__(self, name, coffee_type, coffee_price, coffee_balance, min_coffee_balance):
          super().__init__(name, coffee_type, coffee_price, coffee_balance, min_coffee_balance = 4900)
 
     def __str__(self):
-        return"{}, your current coffee balance is: HUF {}, pay the minimum member coffee balance {} to drink member coffee!".format(self.name, coffee_balance, min_coffee_balance)                                                                                     
+        return"{}, your current coffee balance is: HUF {}, pay the minimum member coffee balance {} to drink member coffee!".format(self.name, self.coffee_balance, self.min_coffee_balance)                                                                                     
 
 j = Coffee("Judit", "Cappuccino", 700, 0, 490)
 j.inputmoney(700)
@@ -51,7 +52,9 @@ j.moneyout(700)
 j.statement()
 
 m = Member("Judit", "mespresso", 450, 0, 0)
-j.inputmoney (4900)
-j.statement()
-j.moneyout(450)
-j.statement()
+m.inputmoney (4900)
+m.statement()
+m.moneyout(450)
+m.statement()
+
+print(str(m))
