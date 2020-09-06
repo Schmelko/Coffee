@@ -11,17 +11,17 @@ class Coffee:
         self.coffee_balance += amount
 
     def moneyout(self, amount):
-        if self.coffee_balance -amount >= 490:
+        if self.coffee_balance - amount >= 490:
             self.coffee_balance -= amount
 
     def statement(self):                                                             
-        if self.coffee_balance >=4800:
+        if self.coffee_balance >= 4800:
             print("your member coffee_balance is less than the minimum member balance, so you cannot drink mespresso but you can drink the other coffees at normal price!".format(self.coffee_balance))
-        elif self.coffee_balance >=700:
+        elif self.coffee_balance >= 700:
            print("your current coffee balance is: HUF {}, you can drink a capuccino!".format(self.coffee_balance))
-        elif self.coffee_balance >=600:
+        elif self.coffee_balance >= 600:
            print("your current coffee balance is: HUF {}, you can drink a doppio!".format(self.coffee_balance))
-        elif self.coffee_balance >=490:
+        elif self.coffee_balance >= 490:
             print("your current coffee balance is: HUF {}, you can drink an espresso!".format(self.coffee_balance))
         else:
             print("your current coffee balance is: HUF {}, you cannot drink any coffee at the moment!".format(self.coffee_balance))
