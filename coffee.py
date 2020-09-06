@@ -11,7 +11,7 @@ class Coffee:
         self.coffee_balance += amount
 
     def moneyout(self, amount):
-        if self.coffee_balance - amount >= 490:
+        if self.coffee_balance - amount >= 0:
             self.coffee_balance -= amount
 
     def statement(self):                                                             
@@ -43,3 +43,15 @@ class Member(Coffee):
 
     def __str__(self):
         return"{}, your current coffee balance is: HUF {}, pay the minimum member coffee balance {} to drink member coffee!".format(self.name, coffee_balance, min_coffee_balance)                                                                                     
+
+j = Coffee("Judit", "Cappuccino", 700, 0, 490)
+j.inputmoney(700)
+j.statement()
+j.moneyout(700)
+j.statement()
+
+m = Member("Judit", "mespresso", 450, 0, 0)
+j.inputmoney (4900)
+j.statement()
+j.moneyout(450)
+j.statement()
